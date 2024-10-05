@@ -4,11 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Betting</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+
+    <title>BetTracker</title>
 </head>
 <body>
+    <header>
+        <!-- top navbar-->
+        <div class="navbar-fixed">
+            <nav class="blue-grey darken-2">
+                <div class="nav-wrapper">
+                    <a href="{{ url_for('home') }}" class="brand-logo">BetTracker</a>
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fa-solid fa-bars"></i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">New Bet</a></li>
+                        <li><a href="">History</a></li>
+                        <li><a href="">Bookmakers</a></li>
+                        <li><a href="">Leagues</a></li>
+                    </ul>
+                </div>
+            </nav>
+        
+        <!-- side nav-->
+        <ul class="sidenav" id="mobile-demo">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="">New Bet</a></li>
+            <li><a href="">History</a></li>
+            <li><a href="">Bookmakers</a></li>
+            <li><a href="">Leagues</a></li>
+        </ul>
+    </div> 
 
     Hello World! This is betting!
-
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
